@@ -1,3 +1,7 @@
-<app-header></app-header>
+<app-header [title]="titulo"></app-header>
 <app-home></app-home>
+<app-contador 
+[contador]="valorInicial"
+(clicado)="recebido($event)"
+></app-contador>
 <app-footer></app-footer>

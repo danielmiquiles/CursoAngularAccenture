@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  titulo = 'Seja Bem Vindo';
+  valorInicial = 10;
+
+  recebido($event){
+    console.log($event);    
+  }
   
 }
