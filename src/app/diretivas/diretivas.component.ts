@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { MEMES_AGRUPADOS_POR_CATEGORIA } from '../../app/dados.js';
 
 @Component({
   selector: 'app-diretivas',
@@ -41,9 +42,11 @@ export class DiretivasComponent {
       placa: 'CMN-9432',
       cor: 'Cinza'
     },
-
-
   ];
+
+  memes = MEMES_AGRUPADOS_POR_CATEGORIA;
+
+  
 
   trocaValor(){
     this.deveExibir = !this.deveExibir;

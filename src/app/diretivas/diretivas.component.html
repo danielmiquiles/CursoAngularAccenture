@@ -11,3 +11,16 @@
 <ul>
     <li *ngFor="let carro of listaCarros"> {{ carro.placa }} - {{ carro.cor }}</li>
 </ul>
+
+
+<ul>
+    <li *ngFor="let categorias of memes"> 
+        <h3> {{ categorias.categoria }}</h3>
+        <ul>
+            <li *ngFor="let meme of categorias.memes; let par = even" > 
+                <img *ngIf="par"  [src]="'https://raw.githubusercontent.com/vitorfgsantos/curso-angular-diretivas/master/images/' + meme.imagemURL">
+                <h2 *ngIf="!par" >PAR</h2>
+            </li>
+        </ul>
+    </li>
+</ul>
