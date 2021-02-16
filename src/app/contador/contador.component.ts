@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ContadorComponent implements OnInit {
 
   @Input() contador = 0;
-  @Output() clicado = new EventEmitter();
+  @Output() contadorChange = new EventEmitter();
 
   constructor() { }
 
@@ -27,7 +27,7 @@ export class ContadorComponent implements OnInit {
 
   onClickButao(){
     console.log('emitindo informações');
-    this.clicado.emit(this.contador);
+    this.contadorChange.emit(this.contador);
   }
 
 }
