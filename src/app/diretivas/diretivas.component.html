@@ -1,0 +1,13 @@
+<button (click)="trocaValor()"> Troca Valor</button>
+
+<div *ngIf="deveExibir">
+    Olá! Etou dentro no ngIf.
+</div>
+
+<ul>
+    <li *ngFor="let item of listaFrutas" >{{ item }}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let carro of listaCarros"> {{ carro.placa }} - {{ carro.cor }}</li>
+</ul>

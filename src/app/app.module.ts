@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContadorComponent } from './contador/contador.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ContadorComponent } from './contador/contador.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    ContadorComponent
+    ContadorComponent,
+    DiretivasComponent
   ],
   imports: [
     BrowserModule,
