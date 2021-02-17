@@ -15,6 +15,9 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PipeComponent } from './shared/components/pipe/pipe.component';
 import { ExercicioPipeComponent } from './shared/components/exercicio-pipe/exercicio-pipe.component';
+import { LoginComponent } from './login/login.component';
+import { ExtratoComponent } from './extrato/extrato.component';
+import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 
 registerLocaleData(localePt);
 
@@ -29,7 +32,10 @@ registerLocaleData(localePt);
     DiretivasComponent,
     ExercicioNgclassComponent,
     PipeComponent,
-    ExercicioPipeComponent
+    ExercicioPipeComponent,
+    LoginComponent,
+    ExtratoComponent,
+    NaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
