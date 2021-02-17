@@ -9,7 +9,7 @@ export class PipeComponent implements OnInit {
 
   filme = {
     titulo: 'harry potter',
-    estrelas: 3,
+    estrelas: 3.765676756,
     precoAluguel: 12.23,
     dataLancamento: '2020-02-01'
   }

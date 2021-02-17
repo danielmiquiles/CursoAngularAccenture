@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { ExercicioPipeComponent } from './exercicio-pipe/exercicio-pipe.component';
 
 registerLocaleData(localePt);
 
@@ -27,7 +28,8 @@ registerLocaleData(localePt);
     ContadorComponent,
     DiretivasComponent,
     ExercicioNgclassComponent,
-    PipeComponent
+    PipeComponent,
+    ExercicioPipeComponent
   ],
   imports: [
     BrowserModule,
