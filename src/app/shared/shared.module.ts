@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from '../app-routing.module';
 import { ContadorComponent } from './components/contador/contador.component';
 import { DiretivasComponent } from './components/diretivas/diretivas.component';
 import { ExercicioNgclassComponent } from './components/exercicio-ngclass/exercicio-ngclass.component';
@@ -20,7 +21,8 @@ import { PipeComponent } from './components/pipe/pipe.component';
     ExercicioPipeComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,
