@@ -9,8 +9,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
