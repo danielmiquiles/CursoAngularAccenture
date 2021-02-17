@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContadorComponent } from './contador/contador.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { ExercicioNgclassComponent } from './exercicio-ngclass/exercicio-ngclass.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     HomeComponent,
     FooterComponent,
     ContadorComponent,
-    DiretivasComponent
+    DiretivasComponent,
+    ExercicioNgclassComponent
   ],
   imports: [
     BrowserModule,
