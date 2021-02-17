@@ -5,16 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContadorComponent } from './contador/contador.component';
-import { DiretivasComponent } from './diretivas/diretivas.component';
+import { ContadorComponent } from './shared/components/contador/contador.component';
+import { DiretivasComponent } from './shared/components/diretivas/diretivas.component';
 
-import { ExercicioNgclassComponent } from './exercicio-ngclass/exercicio-ngclass.component';
+import { ExercicioNgclassComponent } from './shared/components/exercicio-ngclass/exercicio-ngclass.component';
 
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './home/home.component';
-import { PipeComponent } from './pipe/pipe.component';
-import { ExercicioPipeComponent } from './exercicio-pipe/exercicio-pipe.component';
+import { PipeComponent } from './shared/components/pipe/pipe.component';
+import { ExercicioPipeComponent } from './shared/components/exercicio-pipe/exercicio-pipe.component';
 
 registerLocaleData(localePt);
 
