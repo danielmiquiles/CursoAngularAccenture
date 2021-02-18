@@ -39,7 +39,8 @@ registerLocaleData(localePt);
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [{
     provide: LOCALE_ID,

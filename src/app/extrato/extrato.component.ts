@@ -1,3 +1,4 @@
+import { ExtratoService } from './extrato.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExtratoComponent implements OnInit {
 
-  constructor() { }
+  transacoes = [];
+
+  constructor(private extratoService: ExtratoService) { }
 
   ngOnInit(): void {
+    this.transacoes = this.extratoService.getTransactions();
   }
 
 }
