@@ -1,33 +1,31 @@
+import { environment } from './../../environments/environment';
+import { Transacao } from './extrato.interfaces';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { throwError, timer } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExtratoService {
 
-  constructor() { }
+  API_URL = environment.API_URL;
 
-  getTransactions(){
+  constructor(private http: HttpClient) { }
 
-    return [{
-      id: 1,
-      data: '2020-02-04T13:00:24.744Z',
-      descricao: 'Salário',
-      valor: 3500,
-      categoria: 'Salário'
-    }, {
-      id: 2,
-      data: '2020-02-05T14:21:24.744Z',
-      descricao: 'Sapato Verde',
-      valor: -235.99,
-      categoria: 'Vestuário'
-    }, {
-      id: 3,
-      data: '2020-01-29T15:00:24.744Z',
-      descricao: 'Notebook',
-      valor: -10231.99,
-      categoria: 'Eletrônicos'
-    }];
-
+  getTransactions(pagina: number){
+    // Operadores rxjs
+    // const error = throwError('Erro de carregamento');
+    // return timer(5000)
+    // .pipe(
+    //   mergeMap( () => error)
+    // )
+    
+    return this.http.get<Transacao[]>(`${this.API_URL}/transacoes`, {
+      params: {
+        _page: String(pagina),
+      }
+    });
   }
 }
