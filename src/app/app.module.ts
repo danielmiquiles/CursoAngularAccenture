@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 import { SharedModule } from './shared/shared.module';
 import { ContatosComponent } from './contatos/contatos.component';
+import { DetalhesContatosComponent } from './contatos/detalhes-contatos/detalhes-contatos.component';
 
 // import { ContadorComponent } from './shared/components/contador/contador.component';
 // import { DiretivasComponent } from './shared/components/diretivas/diretivas.component';
@@ -32,6 +33,7 @@ registerLocaleData(localePt);
     ExtratoComponent,
     NaoEncontradoComponent,
     ContatosComponent,
+    DetalhesContatosComponent,
     // HeaderComponent,
     // FooterComponent,
     // ContadorComponent,

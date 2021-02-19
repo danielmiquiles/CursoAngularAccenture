@@ -16,4 +16,8 @@ export class ContatosService {
   getContatos(){
     return this.http.get<Contatos[]>(`${this.API_URL}/contatos`)
   }
+
+  getContatoDetails(id: string){
+    return this.http.get<Contatos>(`${this.API_URL}/contatos/${id}`);
+  }
 }

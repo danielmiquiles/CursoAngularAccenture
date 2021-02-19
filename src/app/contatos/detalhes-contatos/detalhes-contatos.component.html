@@ -6,7 +6,10 @@
         </div>
       </div>
 
-    <table class="table table-hover" *ngIf="!estaCarregando" >
+    <div *ngIf="erroNoCarregamento">
+        <h2>Deu erro =(</h2>
+    </div>
+    <table class="table table-hover" *ngIf="!estaCarregando">
         <thead>
             <tr>
                 <th>ID</th>
@@ -19,14 +22,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let contato of contatos" >
-                <td>{{contato.id}}</td>
-                <td>{{contato.nome}}</td>
-                <td>{{contato.cpf}}</td>
-                <td>{{contato.banco}}</td>
-                <td>{{contato.ag}}</td>
-                <td>{{contato.cc}}</td>
-                <td><button (click)="seeDetails(contato.id)"  class="btn btn-primary">Ver detalhes</button></td>
+            <tr >
+                <td>{{detalhes.id}}</td>
+                <td>{{detalhes.nome}}</td>
+                <td>{{detalhes.cpf}}</td>
+                <td>{{detalhes.banco}}</td>
+                <td>{{detalhes.ag}}</td>
+                <td>{{detalhes.cc}}</td>
             </tr>
         </tbody>
     </table>
