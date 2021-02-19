@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +29,7 @@ export class LoginComponent {
     }
   }
 
-  exibeErro(nomeControle: string, form: FormGroup){
+  exibeErro(nomeControle: string, form: NgForm){
     if(!form.controls[nomeControle]){
       return false;
     }
