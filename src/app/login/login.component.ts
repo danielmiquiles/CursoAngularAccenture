@@ -1,8 +1,9 @@
-import { finalize } from 'rxjs/operators';
-import { Router } from '@angular/router';
-import { LoginService } from './login.service';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { finalize } from 'rxjs/operators';
+
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -51,7 +52,6 @@ export class LoginComponent {
       response => this.router.navigate(['home']),
       error => {
         this.erroNoLogin = true;
-        console.log(error)
       },
     )
 

@@ -26,7 +26,6 @@ export class ContadorComponent implements OnInit {
   }
 
   onClickButao(){
-    console.log('emitindo informações');
     this.contadorChange.emit(this.contador);
   }
 

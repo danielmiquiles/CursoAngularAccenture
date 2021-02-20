@@ -12,7 +12,6 @@ export class AppComponent {
 
   recebido($event){
     this.valorInicial = $event;
-    console.log($event);    
   }
   
 }

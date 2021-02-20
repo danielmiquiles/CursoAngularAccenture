@@ -5,10 +5,10 @@
     </div>
   </div>
 
-  <div>
+  <div *ngIf="erroNoCarregamento" >
     <h2>Deu erro =(</h2>
   </div>
-  <table class="table table-hover">
+  <table class="table table-hover" *ngIf="!estaCarregando">
     <thead>
       <tr>
         <th>ID</th>

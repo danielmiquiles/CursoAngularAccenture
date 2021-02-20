@@ -40,9 +40,7 @@ export class DetalhesContatosComponent implements OnInit {
       );
   }
 
-  onSuccess(response: Contatos) {
-    console.log(response);
-    
+  onSuccess(response: Contatos) {    
     this.detalhes = response;
   }
 
