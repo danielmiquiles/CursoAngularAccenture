@@ -11,6 +11,7 @@ import { ContatosService } from './../contatos.service';
   styleUrls: ['./detalhes-contatos.component.scss'],
 })
 export class DetalhesContatosComponent implements OnInit {
+  
   detalhes: Contatos;
   estaCarregando: boolean;
   erroNoCarregamento: boolean;
@@ -40,11 +41,12 @@ export class DetalhesContatosComponent implements OnInit {
   }
 
   onSuccess(response: Contatos) {
+    console.log(response);
+    
     this.detalhes = response;
   }
 
   onError(error){
     this.erroNoCarregamento = true;
-    console.log(error);
   }
 }

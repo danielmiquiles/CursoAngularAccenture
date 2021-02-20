@@ -1,35 +1,34 @@
 <div class="container text-center p-5">
-
-    <div class="text-center" *ngIf="estaCarregando">
-        <div class="spinner-border" style="width: 3rem; height: 3rem" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-
-    <div *ngIf="erroNoCarregamento">
-        <h2>Deu erro =(</h2>
+  <div class="text-center" *ngIf="estaCarregando">
+    <div class="spinner-border" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <table class="table table-hover" *ngIf="!estaCarregando">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Cpf</th>
-                <th>Banco</th>
-                <th>Agência</th>
-                <th>Conta Corrente</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr >
-                <td>{{detalhes.id}}</td>
-                <td>{{detalhes.nome}}</td>
-                <td>{{detalhes.cpf}}</td>
-                <td>{{detalhes.banco}}</td>
-                <td>{{detalhes.ag}}</td>
-                <td>{{detalhes.cc}}</td>
-            </tr>
-        </tbody>
-    </table>
+  </div>
+
+  <div>
+    <h2>Deu erro =(</h2>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Cpf</th>
+        <th>Banco</th>
+        <th>Agência</th>
+        <th>Conta Corrente</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ detalhes.id }}</td>
+        <td>{{ detalhes.nome }}</td>
+        <td>{{ detalhes.cpf }}</td>
+        <td>{{ detalhes.banco }}</td>
+        <td>{{ detalhes.ag }}</td>
+        <td>{{ detalhes.cc }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
