@@ -26,7 +26,10 @@
                 <td>{{contato.banco}}</td>
                 <td>{{contato.ag}}</td>
                 <td>{{contato.cc}}</td>
-                <td><button (click)="seeDetails(contato.id)"  class="btn btn-primary">Ver detalhes</button></td>
+                <td>
+                    <button (click)="seeDetails(contato.id)"  class="btn btn-primary m-1">Ver detalhes</button>
+                    <button (click)="deletarContato(contato.id)"  class="btn btn-danger m-1">Deletar</button>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { finalize, take } from 'rxjs/operators';
 
-import { Contatos } from './contatos.interfaces';
-import { ContatosService } from './contatos.service';
+import { Contatos } from '../contatos.interfaces';
+import { ContatosService } from '../contatos.service';
 
 @Component({
   selector: 'app-contatos',
@@ -42,7 +42,25 @@ export class ContatosComponent implements OnInit {
     this.contatos = response;
   }
 
-  seeDetails(id: string){
-    this.router.navigate([`/contato/${id}`])
+  seeDetails(id: string) {
+    this.router.navigate([`/contato/${id}`]);
+  }
+
+  deletarContato(id: string) {
+    this.estaCarregando = true;
+    this.contatosService
+      .deleteContato(id)
+      .pipe(
+        take(1),
+        finalize(() => (this.estaCarregando = false))
+      )
+      .subscribe(
+        (response) => this.onSuccessDelete(Number(id)),
+        (error) => console.error(error)
+      );
+  }
+
+  onSuccessDelete(id: number) {
+    this.contatos = this.contatos.filter((contato) => contato.id !== id);
   }
 }
