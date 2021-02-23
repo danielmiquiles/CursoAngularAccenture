@@ -8,29 +8,14 @@ import { NaoEstaLogadoGuard } from './shared/guards/nao-esta-logado/nao-esta-log
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('../app/home/home.module').then( m => m.HomeModule),
+    path: '',
+    loadChildren: () => import('./area-logada/area-logada.module').then( m => m.AreaLogadaModule),
     canActivate: [EstaLogadoGuard]
   },
   {
     path: 'login',
     component: LoginComponent,
     canActivate: [NaoEstaLogadoGuard]
-  },
-  {
-    path: 'extrato',
-    loadChildren: () => import('../app/extrato/extrato.module').then( m => m.ExtratoModule),
-    canActivate: [EstaLogadoGuard]
-  },
-  {
-    path: 'contato',
-    loadChildren: () => import('../app/contatos/contatos.module').then( m => m.ContatosModule),
-    canActivate: [EstaLogadoGuard]
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
   },
   {
     path: '**',
