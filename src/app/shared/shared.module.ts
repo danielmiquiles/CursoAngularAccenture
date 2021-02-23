@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from '../app-routing.module';
 import { ContadorComponent } from './components/contador/contador.component';
 import { DiretivasComponent } from './components/diretivas/diretivas.component';
 import { ExercicioNgclassComponent } from './components/exercicio-ngclass/exercicio-ngclass.component';
@@ -9,8 +9,8 @@ import { ExercicioPipeComponent } from './components/exercicio-pipe/exercicio-pi
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PipeComponent } from './components/pipe/pipe.component';
-import { HttpClientModule } from '@angular/common/http';
 
+// import { AppRoutingModule } from '../app-routing.module';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     HttpClientModule
   ],
   exports: [

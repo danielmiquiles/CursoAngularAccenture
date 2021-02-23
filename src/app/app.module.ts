@@ -23,9 +23,9 @@ registerLocaleData(localePt);
   imports: [
     CommonModule,
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule,
   ],
   providers: [{
     provide: LOCALE_ID,

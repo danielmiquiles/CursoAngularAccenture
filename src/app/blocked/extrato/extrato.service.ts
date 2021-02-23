@@ -1,9 +1,8 @@
-import { environment } from './../../environments/environment';
-import { Transacao } from './extrato.interfaces';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { throwError, timer } from 'rxjs';
-import { mergeMap } from 'rxjs/operators';
+
+import { environment } from '../../../environments/environment';
+import { Transacao } from './extrato.interfaces';
 
 @Injectable({
   providedIn: 'root'
