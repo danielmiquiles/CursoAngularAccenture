@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { ContadorComponent } from './components/contador/contador.component';
 import { DiretivasComponent } from './components/diretivas/diretivas.component';
@@ -23,8 +24,8 @@ import { PipeComponent } from './components/pipe/pipe.component';
   ],
   imports: [
     CommonModule,
-    // AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,

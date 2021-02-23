@@ -12,8 +12,8 @@ import { BlockedComponent } from './blocked/blocked.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     BlockedRoutingModule,
-    SharedModule
   ]
 })
 export class BlockedModule { }
