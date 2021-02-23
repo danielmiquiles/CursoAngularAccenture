@@ -8,8 +8,13 @@ import { NaoEstaLogadoGuard } from './shared/guards/nao-esta-logado/nao-esta-log
 
 const routes: Routes = [
   {
+<<<<<<< HEAD
     path: 'blocked',
     loadChildren: () => import('./blocked/blocked.module').then( m => m.BlockedModule),
+=======
+    path: '',
+    loadChildren: () => import('./area-logada/area-logada.module').then( m => m.AreaLogadaModule),
+>>>>>>> 6c895d481a76fe28af790f32ade34c092b20e1af
     canActivate: [EstaLogadoGuard]
   },
   // {
@@ -24,6 +29,7 @@ const routes: Routes = [
     canActivate: [NaoEstaLogadoGuard]
   },
   {
+<<<<<<< HEAD
     path: 'extrato',
     loadChildren: () => import('./blocked/extrato/extrato.module').then( m => m.ExtratoModule),
     canActivate: [EstaLogadoGuard]
@@ -39,6 +45,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+=======
+>>>>>>> 6c895d481a76fe28af790f32ade34c092b20e1af
     path: '**',
     component: NaoEncontradoComponent
   },

@@ -1,0 +1,36 @@
+<div class="container text-center p-5">
+
+    <button (click)="paginaAnterior()" [disabled]="pagina === 1"> < </button>
+  <button (click)="proximaPagina()" [disabled]="pagina === ultimaPagina"> > </button>
+
+  <div class="text-center" *ngIf="estaCarregando">
+    <div class="spinner-border" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="erroNoCarregamento" >
+      <h2>Deu erro =(</h2>
+  </div>
+
+  <table class="table table-hover" *ngIf="!estaCarregando && !erroNoCarregamento">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transacao of transacoes">
+        <td>{{ transacao.id }}</td>
+        <td>{{ transacao.data | date }}</td>
+        <td>{{ transacao.descricao }}</td>
+        <td>{{ transacao.valor | currency: "BRL" }}</td>
+        <td>{{ transacao.categoria }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
