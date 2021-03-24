@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { ContatosRoutingModule } from './contatos-routing.module';
 import { ContatosComponent } from './contatos/contatos.component';
 import { DetalhesContatosComponent } from './detalhes-contatos/detalhes-contatos.component';
+import { NovoContatoComponent } from './novo-contato/novo-contato.component';
 
 
 @NgModule({
   declarations: [
     ContatosComponent,
-    DetalhesContatosComponent
+    DetalhesContatosComponent,
+    NovoContatoComponent
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,4 @@
+import { NovoContatoComponent } from './novo-contato/novo-contato.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -8,6 +9,10 @@ const routes: Routes = [
   {
     path: '',
     component: ContatosComponent
+  },
+  {
+    path: 'novo',
+    component: NovoContatoComponent
   },
   {
     path: ':id',

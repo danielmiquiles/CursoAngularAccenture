@@ -15,24 +15,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginModule),
-    // component: LoginComponent,
     canActivate: [NaoEstaLogadoGuard]
   },
-  // {
-  //   path: 'home',
-  //   loadChildren: () => import('./blocked/home/home.module').then( m => m.HomeModule),
-  //   canActivate: [EstaLogadoGuard]
-  // },
-  // {
-  //   path: 'extrato',
-  //   loadChildren: () => import('./blocked/extrato/extrato.module').then( m => m.ExtratoModule),
-  //   canActivate: [EstaLogadoGuard]
-  // },
-  // {
-  //   path: 'contato',
-  //   loadChildren: () => import('./blocked/contatos/contatos.module').then( m => m.ContatosModule),
-  //   canActivate: [EstaLogadoGuard]
-  // },
   {
     path: '**',
     component: NaoEncontradoComponent

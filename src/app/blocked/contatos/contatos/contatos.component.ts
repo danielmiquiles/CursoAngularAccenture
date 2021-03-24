@@ -63,4 +63,8 @@ export class ContatosComponent implements OnInit {
   onSuccessDelete(id: number) {
     this.contatos = this.contatos.filter((contato) => contato.id !== id);
   }
+
+  novoContato(){
+    this.router.navigate(['contato/novo']);
+  }
 }
